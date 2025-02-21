@@ -1,7 +1,6 @@
 # LegalLadder
 This project provides a visual representation of the Indian judiciary hierarchy. It provides a structured, easy-to-understand flowchart of the court system, from the Supreme Court to lower magistrate courts. It is perfect for law students, researchers, and legal professionals.
-
-TYPE html>
+<!DOCTYPE html>
 <!-- saved from url=(0060)file:///C:/Users/dasgu/OneDrive/Desktop/court_flowchart.html -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
@@ -317,3 +316,26 @@ TYPE html>
                     
                     <div class="section-heading">Summary</div>
                     <p>Judicial Magistrates of the First Class and Second Class serve vital roles in India's criminal justice system. JMFC handles more serious offenses with greater sentencing powers, while JMSC deals with less severe cases. Both classes operate under a structured hierarchy and contribute to maintaining law and order within their jurisdictions.</p>
+                `
+            }
+        };
+
+        function showDetails(courtType) {
+            const contentDiv = document.getElementById('content');
+            contentDiv.innerHTML = `
+                <h2>${courtData[courtType].title}</h2>
+                ${courtData[courtType].content}
+            `;
+            document.getElementById('detailsPane').style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+        }
+
+        function closeDetails() {
+            document.getElementById('detailsPane').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        }
+    </script>
+
+
+
+</body></html>
